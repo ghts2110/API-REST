@@ -16,7 +16,7 @@ import jakarta.persistence.OneToOne;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long ID;
+    private Long ID;
 
     @Column(length = 100)
     private String name;
@@ -45,7 +45,7 @@ public class User {
         return feature;
     }
 
-    public long getID() {
+    public Long getID() {
         return ID;
     }
 
@@ -69,7 +69,7 @@ public class User {
         this.feature = feature;
     }
 
-    public void setID(long iD) {
+    public void setID(Long iD) {
         ID = iD;
     }
 
