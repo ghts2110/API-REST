@@ -1,7 +1,7 @@
 package com.example.service.impl;
 
-import com.example.Repository.UserRepository;
-import com.example.demo.User;
+import com.example.domain.Repository.UserRepository;
+import com.example.domain.model.User;
 import com.example.service.UserService;
 import org.springframework.stereotype.Service;
 

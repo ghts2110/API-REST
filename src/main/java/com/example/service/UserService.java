@@ -1,7 +1,6 @@
 package com.example.service;
 
-import com.example.Repository.UserRepository;
-import com.example.demo.User;
+import com.example.domain.model.User;
 
 public interface UserService
 {
