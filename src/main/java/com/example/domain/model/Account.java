@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long ID;
+    private Long ID;
 
     @Column(unique = true)
     private String number;

@@ -10,7 +10,7 @@ import jakarta.persistence.MappedSuperclass;
 public abstract class BaseItens {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long ID;
+    private Long ID;
 
     private String icon;
     
