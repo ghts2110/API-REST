@@ -32,23 +32,28 @@ classDiagram
     -Number limit
   }
 
-  class Feature {
-    -String icon
-    -String description
-  }
-
   class Card {
     -String number
     -Number limit
   }
 
-  class News {
+  class BaseItens {
     -String icon
     -String description
+  }
+
+  class Feature {
+  }
+
+  class News {
   }
 
   User "1" *-- "1" Account
   User "1" *-- "N" Feature
   User "1" *-- "1" Card
   User "1" *-- "N" News
+
+  BaseItens <|-- Feature
+  BaseItens <|-- News
+
 ```
