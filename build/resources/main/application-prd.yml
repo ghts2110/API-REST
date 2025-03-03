@@ -1,9 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://shinkansen.proxy.rlwy.net:10108/railway
-    username: postgres
-    password: NScLVKEmglUjEnSrtDvkrvbYPzBwFZzT
-  jpa:
-    open-in-view: false
-    hibernate:
-      ddl-auto: validate
