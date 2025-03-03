@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
 @RestControllerAdvice
 public class GlobalException {
 
-    private Logger logger = LoggerFactory.getLogger(GlobalException.class);
+    private final Logger logger = LoggerFactory.getLogger(GlobalException.class);
 
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<String> handleBusinessException(IllegalArgumentException businessException) {
@@ -26,7 +26,7 @@ public class GlobalException {
 
     @ExceptionHandler(Throwable.class)
     public ResponseEntity<String> handleUnexpectedException(Throwable unexpectedException) {
-        var message = "Unexpected server error, see the logs";
+        var message = "Unexpected server error, see the logs.\n" + unexpectedException.getMessage();
         logger.error(message, unexpectedException);
         return new ResponseEntity<>(message, HttpStatus.INTERNAL_SERVER_ERROR);
     }
