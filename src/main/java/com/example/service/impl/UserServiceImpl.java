@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
         if (!userRepository.existsById(id)) {
             throw new NoSuchElementException("User with id " + id + " not found");
         }
-        userToUpdate.setID(id); // Garantir que o ID do usuário será mantido durante a atualização
+        userToUpdate.setID(id);
         return userRepository.save(userToUpdate);
     }
 
